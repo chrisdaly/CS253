@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+{% extends "template.html" %}
+
+{% block content %}
+
+<html>
+<body>
+    <h3>Login</h3>
+    <form class="well span6" method="post">
+
+      <label>Username</label>
+      <input type="text" class="span3" placeholder="Type username here..." name="username" value={{username}}><br/>
+      <label>Password</label>
+      <input type="password" class="span3" placeholder="Type password here..." name="password" value=""><br/>
+      <button class="btn btn-primary">Submit</button>
+      <input type="hidden" name="referer" value="{{next_url}}">
+      
+      <div class="error">{{error}}</div>
+
+    </form>
+  
+
+
+
+</body>
+</div>
+</html>
+{% endblock %}

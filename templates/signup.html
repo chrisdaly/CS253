@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+{% extends "template.html" %}
+{% block content %}
+
+<html>
+<body>
+    <h3>Signup</h3>
+    <form class="well span6" method="post">
+
+      <label>Username</label>
+      <input type="text" class="span3" placeholder="Type username here..." name="username" value="{{username}}"><br/>
+      <font size="4" font color="red">{{error_username}}</font>
+      <!--  -->
+      <label>Password</label>
+      <input type="password" class="span3" placeholder="Type password here..." name="password" value=""><br/>
+      <font size="4" font color="red">{{error_password}}</font>
+      <!--  -->
+      <label>Verify Password</label>
+      <input type="password" class="span3" placeholder="Verify password here..." name="verify" value=""><br/>
+      <font size="4" font color="red">{{error_verify}}</font>
+      <!--  -->
+      <label>Email</label>
+      <input type="text" class="span3" name="email" placeholder="Type email here... (optional)" value="{{email}}"><br/>
+      <font size="4" font color="red">{{error_email}}</font>
+
+      <button class="btn btn-primary">Submit</button>
+    </form>
+  
+
+</body>
+</div>
+</html>
+{% endblock %}
+
+<!--       <table>
+        <tbody><tr>
+          <td class="label">
+            Username
+          </td>
+          <td>
+            <input type="text" name="username" value={{username}}>
+          </td>
+          <td class="error">
+          <font size="4" font color="red">{{error_username}}</font>
+            
+          </td>
+        </tr>
+
+        <tr>
+          <td class="label">
+            Password
+          </td>
+          <td>
+            <input type="password" name="password" value="">
+          </td>
+          <td class="error">
+          <font size="4" font color="red">{{error_password}}</font>
+            
+          </td>
+        </tr>
+
+        <tr>
+          <td class="label">
+            Verify Password
+          </td>
+          <td>
+            <input type="password" name="verify" value="">
+          </td>
+          <td class="error">
+          <font size="4" font color="red">{{error_verify}}</font>
+
+          </td>
+        </tr>
+
+        <tr>
+          <td class="label">
+            Email (optional)
+          </td>
+          <td>
+            <input type="text" name="email" value="{{email}}">
+          </td>
+          <td class="error">
+          <font size="4" font color="red">{{error_email}}</font>
+
+          </td>
+        </tr>
+      </tbody></table> -->

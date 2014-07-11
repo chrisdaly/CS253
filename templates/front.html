@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+{% extends "template.html" %}
+
+{% block content %}
+
+  {% for p in pages %}
+    {{ p.render() | safe }}
+  {% endfor %}
+
+  {% if img_url %}
+  	<img class = "map" src="{{img_url}}">
+  {% endif %}
+
+<div class="age">
+	{{age}}
+<div>
+
+{% endblock %}

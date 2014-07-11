@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+{% extends "template.html" %}
+
+{% block content %}
+
+  {% for p in pages %}
+    {{ p.render() | safe }}
+  {% endfor %}
+
+  <div class "well">
+
+	<div class="btn-toolbar">
+		<div class="btn-group">
+			<a class="btn btn-primary" href="/_edit/{{path}}"><i class="icon-list"></i>Edit</a>
+			<a class="btn btn-info" href="/_history/{{path}}"><i class="icon-list"></i>History</a>
+
+		</div>
+	</div>
+</div>
+
+  {% if img_url %}
+  	<img class = "map" src="{{img_url}}">
+  {% endif %}
+
+<div class="age">
+	{{age}}
+<div>
+
+{% endblock %}

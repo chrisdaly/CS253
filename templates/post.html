@@ -1,0 +1,26 @@
+<!-- template for an individual post -->
+
+<!DOCTYPE html>
+<div class="post">
+
+  <div class="post-heading">
+      <div class="post-title">
+      <a href="{{p.title}}?v={{p.key().id()}}">{{p.title}}</a>
+      </div>
+
+      <div class="post-date">
+        {% if history %}
+         {{p.created.strftime("%H:%M, %d %B %Y")}}
+        {% endif %}
+        {% if not history %}
+         {{p.created.strftime("%d %B %Y")}}
+        {% endif %}
+      </div>
+
+  </div>
+</div>
+
+  <p class="post-content">
+    {{p._render_text | safe}}
+  </p>
+  <br><br>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+{% extends "template.html" %}
+{% block content %}
+
+<html>
+  <body>
+  <table class="table table-striped table-hover">
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Content</th>
+        <th>Last modified</th>
+      </tr>
+    </thead>
+
+    {% for p in pages %}
+    <tbody>
+      <td><a href="/{{p.title}}?v={{p.key().id()}}">{{ p.title }}</a></td>
+
+      <td>{{ p.content }}</td>
+      <td>{{ p.last_modified }}</td>
+      <td><a class="btn btn-primary" href="/_edit/{{p.title}}?v={{p.key().id()}}"><i class="icon-list"></i>Edit</a></td>
+      <td><a class="btn btn-danger" href="/_delete/{{p.title}}?v={{p.key().id()}}"><i class="icon-list"></i>Delete</a></td>
+    </tbody>
+    {% endfor %}
+  </table>
+  </body>
+</html>
+{% endblock %}

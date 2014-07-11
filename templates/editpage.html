@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+
+{% extends "template.html" %}
+
+{% block content %}
+
+<html>
+<div class="formfield">
+	<form method="post">
+		<label>
+			<div>Title</div>
+		<input type="text" name="title" value={{page.title}}>
+		</label>
+			<label for="textarea">Content</label>
+			<textarea name="content">{{page.content}}</textarea>
+		    <div class="error">{{error}}</div>
+			<button class="btn btn-primary">Submit</button>
+	</form>
+</div>
+</html>
+{% endblock %}
