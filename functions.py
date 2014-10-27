@@ -13,7 +13,7 @@ from google.appengine.ext import db
 from google.appengine.api import memcache
 from xml.dom import minidom
 
-SECRET = "MAKI"
+SECRET = ""
 GMAPS_URL = "http://maps.googleapis.com/maps/api/staticmap?size=380x263&sensor=false&"
 IP_URL = "http://api.hostip.info/?ip="
 
